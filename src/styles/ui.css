@@ -1,0 +1,230 @@
+/* ============ NAV ============ */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.9rem 3rem;
+  transition: background 0.4s, border-color 0.4s, backdrop-filter 0.4s;
+  border-bottom: 1px solid transparent;
+}
+
+body.scrolled .nav {
+  background: rgba(10, 5, 6, 0.82);
+  backdrop-filter: blur(14px);
+  border-bottom-color: var(--border-soft);
+}
+
+.nav__logo {
+  font-family: var(--display);
+  font-size: 1.05rem;
+  letter-spacing: 0.04em;
+}
+
+.nav__links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav__links a {
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
+  color: var(--muted);
+  position: relative;
+  padding: 4px 0;
+  transition: color 0.3s;
+}
+
+.nav__links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background: var(--red);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.35s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.nav__links a:hover {
+  color: var(--text);
+}
+
+.nav__links a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* ============ BUTTONS ============ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  padding: 0.85rem 1.6rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.35s, border-color 0.35s, box-shadow 0.35s, transform 0.2s;
+  z-index: 0;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--red);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s cubic-bezier(0.65, 0, 0.35, 1);
+  z-index: -1;
+}
+
+.btn:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.btn:hover {
+  box-shadow: 0 0 24px rgba(229, 9, 20, 0.45);
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+.btn--red {
+  background: var(--red);
+  border-color: var(--red);
+  color: #fff;
+  box-shadow: 0 0 28px rgba(229, 9, 20, 0.35);
+}
+
+.btn--red::before {
+  background: var(--red-glow);
+}
+
+.btn--sm {
+  padding: 0.6rem 1.2rem;
+  font-size: 0.66rem;
+}
+
+.btn--ghost {
+  background: #fff;
+  color: #0a0506;
+  border-color: #fff;
+}
+
+.btn--outline {
+  background: rgba(229, 9, 20, 0.08);
+}
+
+/* ============ STAGE / SECTION HEAD ============ */
+.stage {
+  transform-style: flat;
+}
+
+.section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 7rem 2.5rem;
+}
+
+.section-head__ep {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+  color: var(--muted);
+}
+
+.section-head__sep {
+  opacity: 0.4;
+}
+
+.section-head__title {
+  font-family: var(--display);
+  font-size: clamp(2.2rem, 6vw, 4.2rem);
+  line-height: 1.02;
+  text-transform: uppercase;
+  margin-bottom: 3.5rem;
+}
+
+.clip-mask {
+  display: block;
+  overflow: hidden;
+}
+
+.clip-line {
+  display: block;
+}
+
+.clip-line--red {
+  color: var(--red);
+  text-shadow: 0 0 40px rgba(229, 9, 20, 0.5);
+}
+
+/* ============ CARDS & CHIPS ============ */
+.card {
+  background: linear-gradient(160deg, var(--surface-2), var(--surface));
+  border: 1px solid var(--border-soft);
+  border-radius: 14px;
+  padding: 1.8rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.card--red-glow {
+  border-color: var(--border);
+  box-shadow: 0 0 40px rgba(229, 9, 20, 0.12), inset 0 1px 0 rgba(229, 9, 20, 0.25);
+}
+
+.card__ghost {
+  position: absolute;
+  top: -0.4em;
+  right: 0.15em;
+  font-family: var(--display);
+  font-size: 7rem;
+  color: rgba(229, 9, 20, 0.08);
+  pointer-events: none;
+}
+
+.card__label {
+  margin-bottom: 1rem;
+}
+
+.chiprow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.1rem;
+}
+
+.chip {
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.1em;
+  padding: 0.32rem 0.7rem;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  color: var(--muted);
+  background: rgba(229, 9, 20, 0.05);
+  transition: all 0.3s;
+}
+
+.chip:hover {
+  color: #fff;
+  border-color: var(--red);
+  box-shadow: 0 0 14px rgba(229, 9, 20, 0.3);
+}

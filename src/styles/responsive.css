@@ -1,0 +1,106 @@
+/* ============ RESPONSIVE ============ */
+@media (max-width: 1024px) {
+  .nav {
+    padding: 0.9rem 1.5rem;
+  }
+
+  .nav__links {
+    display: none;
+  }
+
+  .hero {
+    padding: 6rem 1.5rem 0;
+  }
+
+  .hero__inner {
+    grid-template-columns: 1fr;
+  }
+
+  .hero__right {
+    max-width: 420px;
+  }
+
+  .section {
+    padding: 5rem 1.5rem;
+  }
+
+  .about__grid,
+  .contact__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .projects__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .cap__row {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+  }
+
+  .skills__stage {
+    min-height: 340px;
+  }
+
+  .skills__deck {
+    height: 420px;
+  }
+
+  .deck-card {
+    width: 88%;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero__stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero__sidecard {
+    display: none;
+  }
+
+  .projects__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact__row {
+    grid-template-columns: 1fr;
+  }
+
+  .marquee--bottom {
+    margin: 0 -1.5rem;
+  }
+
+  .hero__title {
+    font-size: clamp(2.6rem, 13vw, 4rem);
+  }
+
+  .skills__deck {
+    height: 480px;
+  }
+
+  .deck-card {
+    width: 94%;
+    padding: 1.4rem;
+  }
+
+  .footer__top {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+}
