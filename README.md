@@ -2,7 +2,7 @@
 
 A cinematic, Netflix-inspired developer portfolio built with **React 18 + TypeScript + Vite**, featuring GSAP scroll animations, a Devflix-themed UI, interactive project cards with downloadable technical project reports, and a fully responsive layout.
 
-> **Live demo:** _add your GitHub Pages / deployment URL here after enabling Pages_
+> **Live demo:** _https://saipavan122001.github.io/Pavan-Portfolio/_
 
 ---
 
@@ -42,8 +42,8 @@ A cinematic, Netflix-inspired developer portfolio built with **React 18 + TypeSc
 
 ```bash
 # clone the repo
-git clone https://github.com/SaiPavan122001/PremiumPortfolio.git
-cd PremiumPortfolio
+git clone https://github.com/SaiPavan122001/Pavan-Portfolio.git
+cd Pavan-Portfolio
 
 # install dependencies
 npm install
@@ -61,7 +61,7 @@ npm run preview
 ## 📁 Project Structure
 
 ```
-PremiumPortfolio/
+Pavan-Portfolio/
 ├── public/
 │   ├── profile.svg              # hero photo fallback
 │   └── reports/                 # technical project report PDFs (open in new tab)
