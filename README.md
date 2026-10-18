@@ -2,7 +2,7 @@
 
 A cinematic, Netflix-inspired developer portfolio built with **React 18 + TypeScript + Vite**, featuring GSAP scroll animations, a Devflix-themed UI, interactive project cards with downloadable technical project reports, and a fully responsive layout.
 
-> **Live demo:** _https://saipavan122001.github.io/Pavan-Portfolio/_
+> **Live demo:** [saipavan122001.github.io/Pavan-Portfolio](https://saipavan122001.github.io/Pavan-Portfolio/)
 
 ---
 
